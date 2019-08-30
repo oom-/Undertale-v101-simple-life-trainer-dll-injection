@@ -1,0 +1,116 @@
+Lancement du Thread (DLL)
+Lancement du Thread (scan)
+Lancement scan main module
+Pattern: 89 5E * 8B 0D * * * * 8D 87
+Pattern parsé
+TROUVEYYYYYY
+Try set life
+Crash ?
+First addr: 0050C2EA
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C98358
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C98358
+------ (0x03C98358 + 4):3c9835c -> 0x03CB35B8
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C98358
+------ (0x03C98358 + 4):3c9835c -> 0x03CB35B8
+------ (0x03CB35B8 + 0x1D0):3cb3788 -> 0x00000000
+
+Lancement du Thread (DLL)
+Lancement du Thread (scan)
+Lancement scan main module
+Pattern: 89 5E * 8B 0D * * * * 8D 87
+Pattern parsé
+TROUVEYYYYYY
+Try set life
+Crash ?
+First addr: 0050C2EA
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+------ (0x03D58118 + 4):3d5811c -> 0x03D735B8
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+------ (0x03D58118 + 4):3d5811c -> 0x03D735B8
+------ (0x03D735B8 + 0x1D0):3d73788 -> 0x03D73788
+
+Done
+Try set life
+Crash ?
+First addr: 0050C2EA
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+------ (0x03D58118 + 4):3d5811c -> 0x03D735B8
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03D58118
+------ (0x03D58118 + 4):3d5811c -> 0x03D735B8
+------ (0x03D735B8 + 0x1D0):3d73788 -> 0x03D73788
+
+Done
+Lancement du Thread (DLL)
+Lancement du Thread (scan)
+Lancement scan main module
+Pattern: 89 5E * 8B 0D * * * * 8D 87
+Pattern parsé
+TROUVEYYYYYY
+Try set life
+Crash ?
+First addr: 0050C2EA
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C07E18
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C07E18
+------ (0x03C07E18 + 4):3c07e1c -> 0x03C235B8
+
+First addr: 0050C2EA
+------ 0x0050C2EA -> 0x0079A148
+------ (0x0079A148 + 0):79a148 -> 0x03C07E18
+------ (0x03C07E18 + 4):3c07e1c -> 0x03C235B8
+------ (0x03C235B8 + 0x1D0):3c23788 -> 0x03C23788
+
+Done
+Lancement du Thread (DLL)
+Lancement du Thread (scan)
+Lancement scan main module
+Pattern: 89 5E * 8B 0D * * * * 8D 87
+Pattern parsé
+TROUVEYYYYYY
+Done
