@@ -97,7 +97,7 @@ bool InjectDLL(const int &pid, const std::string &path)
 		CloseHandle(hThread); //close useless handle
 		VirtualFreeEx(hProc, vAlloc, dllPathSize, MEM_RELEASE); //clean memory
 		//Part not needed LoadLibraryA run DLL_MAIN on loaded if dll wasen't in list of dll's before
-		/* 
+		/*
 		std::cout << "--- Activation du cheat dans Undertale...";
 		GetModuleInformation(hProc, (HMODULE)hDll, &lpmodinfo, sizeof(lpmodinfo)); //get module entry adress
 		hThread = CreateRemoteThread(hProc, NULL, 0, (LPTHREAD_START_ROUTINE)lpmodinfo.EntryPoint, NULL, 0, NULL);
@@ -162,10 +162,12 @@ int main()
 		{
 			std::cout << "Injection de la librairie dans Undertale: " << std::endl;; //Step 3
 			success = InjectDLL(processId, libpath);
-			std::cout << (success ? "OK" : "KO") << std::endl;
-			std::cout << "L'injection a echoue (too fast), reessai (" << (wait + 1) << ") dans 5 sec..." << std::endl;
-			std::this_thread::sleep_for(std::chrono::seconds(5));
-			wait++;
+			if (!success)
+			{
+				std::cout << "L'injection a echoue (too fast), reessai (" << (wait + 1) << ") dans 5 sec..." << std::endl;
+				std::this_thread::sleep_for(std::chrono::seconds(5));
+				wait++;
+			}
 		}
 		/*std::cout << "Supression de la librairie sur le disque..." << std::endl; //Step 4
 		success = deleteTempLibrary(libpath);
