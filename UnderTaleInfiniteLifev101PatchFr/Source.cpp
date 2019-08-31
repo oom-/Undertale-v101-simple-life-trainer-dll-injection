@@ -134,7 +134,7 @@ int main()
   \\___/|_| |_|\\__,_|\\___|_|   \\__\\__,_|_|\\___| |_|   \\__,_|\\__\\___|_| |_|	\n\
         " << std::endl;
 	std::cout << "Appuyer sur la touche '$' en jeux pour remettre votre vie au max" << std::endl;
-	std::cout << "Chemin librairie: " << libpath << std::endl;
+	//std::cout << "Chemin librairie: " << libpath << std::endl;
 	std::cout << "\nTrouver Undertale..."; //Step 1
 	while (processId == 0)
 	{
