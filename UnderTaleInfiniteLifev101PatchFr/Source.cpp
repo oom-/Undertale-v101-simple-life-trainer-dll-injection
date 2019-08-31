@@ -169,7 +169,7 @@ int main()
 				wait++;
 			}
 		}
-		std::cout << "Cheat actif et opérationel...OK" << std::endl;
+		std::cout << "Cheat actif et operationel...OK" << std::endl;
 		/*std::cout << "Supression de la librairie sur le disque..." << std::endl; //Step 4
 		success = deleteTempLibrary(libpath);
 		std::cout << (success ? "OK" : "KO") << std::endl;*/
