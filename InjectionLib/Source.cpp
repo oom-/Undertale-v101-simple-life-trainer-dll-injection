@@ -11,6 +11,7 @@
 #define KEY_DOWN 0
 #define KEY_UP 1
 #define VK_DOLLAR 186
+#define VK_STAR 220
 #define HAVE_GUARD(value)((value / PAGE_GUARD) >= 1 && 2 > (value / PAGE_GUARD))
 
 LPVOID baseAddr;
@@ -61,6 +62,22 @@ void TurnFullLife()
 	//printLogs("Done");
 }
 
+void TurnFullLifeFlowey()
+{
+	LPVOID addr = baseAddr; 
+
+	addr = baseAddr;
+	addr = (LPVOID)readMemory<DWORD>(addr);
+	addr = (LPVOID)readMemory<DWORD>((LPVOID)((DWORD)addr + 0));
+	addr = (LPVOID)readMemory<DWORD>((LPVOID)((DWORD)addr + 4));
+	addr = (LPVOID)((DWORD)addr + 0x970);
+	writeMemory<double>(addr, 500);
+	/*printLogs("TURNFULLLIFEFLOWEY");
+	std::stringstream stream;
+	stream << "--TURNFULLLIFEFLOWEY: 0x" << std::hex << addr << std::endl;
+	printLogs(stream.str()); */
+}
+
 /*Key detection and main*/
 BYTE hex2byte(std::string const & hex)
 {
@@ -78,18 +95,32 @@ bool IsWindowInFocus()
 
 DWORD WINAPI hookKeys(LPVOID lparam)
 {
-	bool keydown = false;
-	bool keystate = false;
+	//printLogs("HOOK LANCER");
+	bool keydowndollar = false;
+	bool keystatedollar = false;
+	bool keydownstar = false;
+	bool keystatestar = false;
 	while (true)
 	{
-		keystate = (GetAsyncKeyState(VK_DOLLAR) & 0x8000) ? 0 : 1;
-		if (keystate == KEY_DOWN && !keydown)
-			keydown = true;
-		else if (keystate == KEY_UP && keydown)
+		/*Dollar*/
+		keystatedollar = (GetAsyncKeyState(VK_DOLLAR) & 0x8000) ? 0 : 1;
+		if (keystatedollar == KEY_DOWN && !keydowndollar)
+			keydowndollar = true;
+		else if (keystatedollar == KEY_UP && keydowndollar)
 		{
-			keydown = false;
+			keydowndollar = false;
 			if (IsWindowInFocus()) //check after to win time on key detection
 				TurnFullLife();
+		}
+		/*Star*/
+		keystatestar = (GetAsyncKeyState(VK_STAR) & 0x8000) ? 0 : 1;
+		if (keystatestar == KEY_DOWN && !keydownstar)
+			keydownstar = true;
+		else if (keystatestar == KEY_UP && keydownstar)
+		{
+			keydownstar = false;
+			if (IsWindowInFocus()) //check after to win time on key detection
+				TurnFullLifeFlowey();
 		}
 		Sleep(10);
 	}
